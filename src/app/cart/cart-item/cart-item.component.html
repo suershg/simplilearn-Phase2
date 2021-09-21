@@ -1,0 +1,11 @@
+
+
+
+
+
+    <td>{{item.category}}</td>
+    <td>{{item.brand}} </td>
+    <td><input type="number" min="0" [(ngModel)]="quantity"  (ngModelChange)="onQuantityChange()" style="width: 50px;" ></td>
+    <td>{{item.units}} *</td>
+    <td>{{item.price}}</td>
+    <td>={{total}}</td>

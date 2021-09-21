@@ -1,0 +1,16 @@
+
+
+
+        <div class="border">
+            <div class="item">
+                <img [src]='item.image' width=180 height=150 >
+            </div>
+            <div>
+                <p>{{item.category}} : {{item.brand}}</p>
+                <p>{{item.units}} : {{item.price | currency : "INR"}}  </p>
+            </div>
+            <div class="item">
+                <button class="btn btn-dark item"  (click)="addToCart()">Add to cart</button>
+            </div>
+        </div>
+    
