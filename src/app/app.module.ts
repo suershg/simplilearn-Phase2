@@ -9,7 +9,6 @@ import { ProductItemComponent } from './product-list/product-item/product-item.c
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { TotalBreakoutService } from './total-breakout.service';
-import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { AdminComponent } from './admin/admin.component';
     ProductListComponent,
     ProductItemComponent,
     CartComponent,
-    CartItemComponent,
-    AdminComponent
+    CartItemComponent,    
   ],
   imports: [
     BrowserModule,

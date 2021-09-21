@@ -44,6 +44,14 @@ export class InteractionService {
     } 
    }
 
+  add_edit(id:number, category:string, brand:string, image:string, price:number, units:string)
+  {
+    for(let item of this.items[category])
+    {
+        console.log(item.id);
+    }
+      
+  }
   sendMessage(message: description){
     
     this._teacherMessageSource.next(message);
