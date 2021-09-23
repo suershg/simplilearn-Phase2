@@ -46,11 +46,37 @@ export class InteractionService {
 
   add_edit(id:number, category:string, brand:string, image:string, price:number, units:string)
   {
+    let flag=0;
     for(let item of this.items[category])
     {
-        console.log(item.id);
+        if(item.id == id)
+        {
+            item.brand=brand;  item.price=price; item.units=units;
+            flag=1;
+            break;          
+        }
+    }
+    if(flag==0)
+    {
+      this.items[category].push(new description(id, category, brand, "assets/images/"+image, price, units, 0));
     }
       
+  }
+  delete(id:number, category:string)
+  {
+    let index=-1;
+    for(let i in this.items[category])
+    {
+        if(this.items[category][i].id == id)
+        {
+            index = +i;
+            break;          
+        }
+    }
+    if(index != -1)
+    {
+      this.items[category].splice(index, 1);
+    }
   }
   sendMessage(message: description){
     

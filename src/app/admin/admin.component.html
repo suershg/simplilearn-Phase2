@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+
+                <div class="form-group">
+                  <label for="id">ID</label>
+                  <input type="text" class="form-control" id="id" name="id" [(ngModel)]="id" placeholder="Enter Product id" required>
+                </div>
+                <br>
+
+                <div class="form-group">
+                  <label for="category">Select category</label>
+                  <select class="form-control" id="category" name="category" [(ngModel)]="category" required>
+                    <option value="fruits">Fruits</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="rice">Rice</option>
+                    <option value="sugar">Sugar</option>
+                    <option value="bread">Bread</option>
+                  </select>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="brand">Brand</label>
+                    <input type="text" class="form-control" id="brand" name="brand" [(ngModel)]="brand" required placeholder="brand(rice, sugar, bread)/Name (for fruits, vegetables)">
+                </div>
+                  <br>
+
+                  <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="text" class="form-control" id="image" name="image" [(ngModel)]="image" required placeholder="Enter Image name Downloaded in assests folder">
+                </div>
+                  <br>
+
+                  <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" id="price" name="price" [(ngModel)]="price" required placeholder="Enter Price">
+                </div>
+                  <br>
+
+                  <div class="form-group">
+                    <label for="units">Units</label>
+                    <input type="text" class="form-control" id="units" name="units" [(ngModel)]="units" required placeholder="Enter units(fruits 1pcs, rice in kgs, bread in 400gms)">
+                </div>
+                  <br>
+                
+                  <div class="form-group">
+                    <button class="btn btn-dark" (click)="add_edit()">Add/Edit</button>
+                </div>
+                  <br>
+
+              </form>
+        </div>
+        <div class="col-md-4" >
+            <form>
+
+                <div class="form-group">
+                  <label for="id">ID</label>
+                  <input type="text" class="form-control" id="id" name="id" [(ngModel)]="id1" required placeholder="Enter Product id">
+                </div>
+                <br>
+                
+                <div class="form-group">
+                    <label for="category">Select category</label>
+                    <select class="form-control" id="category" name="category" [(ngModel)]="category1" required>
+                      <option value="fruits">Fruits</option>
+                      <option value="vegetables">Vegetables</option>
+                      <option value="rice">Rice</option>
+                      <option value="sugar">Sugar</option>
+                      <option value="bread">Bread</option>
+                    </select>
+                  </div><br>
+
+                <div class="form-group">
+                    <button class="btn btn-dark" (click)="delete()">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

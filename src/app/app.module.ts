@@ -9,6 +9,10 @@ import { ProductItemComponent } from './product-list/product-item/product-item.c
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { TotalBreakoutService } from './total-breakout.service';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
+import { UserIndexComponent } from './user-index/user-index.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { TotalBreakoutService } from './total-breakout.service';
     ProductListComponent,
     ProductItemComponent,
     CartComponent,
-    CartItemComponent,    
+    CartItemComponent,
+    AdminComponent,
+    HomeComponent,
+    UserComponent,
+    UserIndexComponent,    
   ],
   imports: [
     BrowserModule,

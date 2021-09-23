@@ -14,12 +14,15 @@ export class CartComponent implements OnInit {
  // cartItems:description[] = []
   cartItems:any = {}
   totalPrice:number=0;
+  payment?:string;
   constructor(private _interactionService: InteractionService, public _totalBreakoutService:TotalBreakoutService) {
-     
-        
+       
    }
 
-  
+  pay()
+  {
+      this.payment= "your order placed successfully";
+  }
 
   ngOnInit(): void {
 
@@ -27,8 +30,11 @@ export class CartComponent implements OnInit {
             message => { 
               var item = <description> message;
               this.cartItems[item.id] = item;
+              this.payment = "";
             }
         )
+
+        
   }
 
 }
